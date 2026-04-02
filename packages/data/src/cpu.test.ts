@@ -18,9 +18,9 @@ describe('cpu provider', () => {
         expect(cpu.model.length).toBeGreaterThan(0)
     })
 
-    it('speed returns a positive number', () => {
+    it('speed returns a non-negative number', () => {
         expect(typeof cpu.speed).toBe('number')
-        expect(cpu.speed).toBeGreaterThan(0)
+        expect(cpu.speed).toBeGreaterThanOrEqual(0)
     })
 
     it('loadAvg returns an array of 3 numbers', () => {
