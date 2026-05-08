@@ -17,6 +17,7 @@ export interface Endpoint {
 
 const _latencyHistory = new Map<string, number[]>();
 const MAX_HISTORY = 60;
+const MAX_URLS = 100;
 
 /** HTTP data provider — uses native fetch (Node 18+) */
 export const http = {
@@ -35,7 +36,13 @@ export const http = {
             const latency = Date.now() - start;
 
             // Store latency history
-            if (!_latencyHistory.has(url)) _latencyHistory.set(url, []);
+            if (!_latencyHistory.has(url)) {
+                if (_latencyHistory.size >= MAX_URLS) {
+                    const oldest = _latencyHistory.keys().next().value;
+                    if (oldest !== undefined) _latencyHistory.delete(oldest);
+                }
+                _latencyHistory.set(url, []);
+            }
             const history = _latencyHistory.get(url)!;
             history.push(latency);
             if (history.length > MAX_HISTORY) history.shift();
