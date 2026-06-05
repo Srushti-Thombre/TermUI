@@ -1,6 +1,7 @@
 import type { Terminal } from '../terminal/Terminal.js';
 import { moveUp, clearLine } from '../utils/ansi.js';
 import type { Screen } from '../terminal/Screen.js';
+
 export class LiveRender {
 
     constructor(
@@ -8,27 +9,32 @@ export class LiveRender {
          private readonly screen: Screen
     ) {}
 
-    private getHeight(frame: string): number {
+      private getHeight(frame: string): number {
+        if (frame.length === 0) {
+            return 0;
+        }
+
         return frame.split('\n').length;
     }
 
     render(frame: string): void {
         let output = '';
 
-        if (this.screen.lastRenderedHeight > 0) {
-            output += moveUp(this.screen.lastRenderedHeight);
+         const previousHeight = this.screen.lastRenderedHeight;
 
-            for (let i = 0; i < this.screen.lastRenderedHeight; i++) {
+        if (previousHeight > 0) {
+            output += moveUp(previousHeight);
+
+            for (let i = 0; i < previousHeight; i++) {
                 output += clearLine;
 
-                if (i < this.screen.lastRenderedHeight - 1) {
+                if (i < previousHeight - 1) {
                     output += '\n';
                 }
             }
 
-            output += moveUp(
-                Math.max(0, this.screen.lastRenderedHeight - 1)
-            );
+            output += '\r';
+               
         }
 
         output += frame;

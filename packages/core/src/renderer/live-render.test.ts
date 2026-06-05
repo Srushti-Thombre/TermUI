@@ -144,4 +144,40 @@ describe('LiveRender', () => {
 
     terminal.restore();
     });
+    it('stores zero height for empty frames', () => {
+    const fakeStdout: FakeStdout = {
+        writes: '',
+        columns: 80,
+        rows: 24,
+        isTTY: true,
+        write(s: string) {
+            this.writes += s;
+        },
+        on() {},
+        off() {},
+    };
+
+    const fakeStdin: FakeStdin = {
+        isTTY: true,
+        setRawMode() {},
+        resume() {},
+        pause() {},
+        on() {},
+        off() {},
+    };
+
+    const terminal = new Terminal({
+        stdout: fakeStdout as unknown as NodeJS.WriteStream,
+        stdin: fakeStdin as unknown as NodeJS.ReadStream,
+    });
+
+    const screen = new Screen(80, 24);
+    const live = new LiveRender(terminal, screen);
+
+    live.render('');
+
+    expect(screen.lastRenderedHeight).toBe(0);
+
+    terminal.restore();
+});
 });
