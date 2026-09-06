@@ -24,8 +24,8 @@ We want to thank all the amazing contributors who have helped make TermUI what i
 | <img src="https://avatars.githubusercontent.com/u/196519254?v=4" width="40" height="40" style="border-radius: 50%;" alt="anshika1179" /> | [@anshika1179](https://github.com/anshika1179) | 13 |
 | <img src="https://avatars.githubusercontent.com/u/149316563?v=4" width="40" height="40" style="border-radius: 50%;" alt="Pranaykarvi" /> | [@Pranaykarvi](https://github.com/Pranaykarvi) | 12 |
 | <img src="https://avatars.githubusercontent.com/u/173547900?v=4" width="40" height="40" style="border-radius: 50%;" alt="TanCodeX" /> | [@TanCodeX](https://github.com/TanCodeX) | 12 |
+| <img src="https://avatars.githubusercontent.com/u/177668898?v=4" width="40" height="40" style="border-radius: 50%;" alt="Srushti-Thombre" /> | [@Srushti-Thombre](https://github.com/Srushti-Thombre) | 12 |
 | <img src="https://avatars.githubusercontent.com/u/177104344?v=4" width="40" height="40" style="border-radius: 50%;" alt="Nikhil-0710" /> | [@Nikhil-0710](https://github.com/Nikhil-0710) | 11 |
-| <img src="https://avatars.githubusercontent.com/u/177668898?v=4" width="40" height="40" style="border-radius: 50%;" alt="Srushti-Thombre" /> | [@Srushti-Thombre](https://github.com/Srushti-Thombre) | 11 |
 | <img src="https://avatars.githubusercontent.com/u/197649458?v=4" width="40" height="40" style="border-radius: 50%;" alt="Komal2008" /> | [@Komal2008](https://github.com/Komal2008) | 10 |
 | <img src="https://avatars.githubusercontent.com/u/208695824?v=4" width="40" height="40" style="border-radius: 50%;" alt="Ishika-1110" /> | [@Ishika-1110](https://github.com/Ishika-1110) | 10 |
 | <img src="https://avatars.githubusercontent.com/u/143188796?v=4" width="40" height="40" style="border-radius: 50%;" alt="OnkarJondhale" /> | [@OnkarJondhale](https://github.com/OnkarJondhale) | 9 |
